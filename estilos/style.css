@@ -5,3 +5,39 @@
     Verde: #49a09d
     Lilás: #5f2c82
 */
+
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+body, html {
+    background-color: #5f2c82;
+}
+
+
+
+section#login {
+    position: absolute; /*determina como ficará final do objeto, permitindo o deslocamento*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*permite modificar a coordenação do objeto no espaço*/
+    overflow: hidden; /* tudo que estiver fora da borda, irá esconder*/
+
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450); /* 0px 0px (deslocamento) 10px(espalhamento)*/
+}
+
+section#login > div#imagem {
+    background: #5f2c82 url(../imagens/funko.jpg) no-repeat;
+    background-size: cover;
+    height: 200px;
+}
+
+section#login > div#formulario {
+    padding: 10px;
+}
