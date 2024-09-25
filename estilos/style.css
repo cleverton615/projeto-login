@@ -10,13 +10,20 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 
 body, html {
     background-color: #5f2c82;
+    height: 100vh;
+    width: 100vw;
 }
 
-
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
 
 section#login {
     position: absolute; /*determina como ficará final do objeto, permitindo o deslocamento*/
@@ -30,11 +37,16 @@ section#login {
     height: 500px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450); /* 0px 0px (deslocamento) 10px(espalhamento)*/
+
+    transition: width .3s, height .3s; /* Animação de transição*/
+    transition-timing-function: ease; /* Suaviza a transição*/
 }
 
 section#login > div#imagem {
+    display: block;
     background: #5f2c82 url(../imagens/funko.jpg) no-repeat;
     background-size: cover;
+    background-position: left bottom;
     height: 200px;
 }
 
