@@ -29,7 +29,6 @@ section#login {
     position: absolute; /*determina como ficará final do objeto, permitindo o deslocamento*/
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /*permite modificar a coordenação do objeto no espaço*/
     overflow: hidden; /* tudo que estiver fora da borda, irá esconder*/
 
     background-color: white;
@@ -38,6 +37,7 @@ section#login {
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450); /* 0px 0px (deslocamento) 10px(espalhamento)*/
 
+    transform: translate(-50%, -50%); /*permite modificar a coordenação do objeto no espaço*/
     transition: width .3s, height .3s; /* Animação de transição*/
     transition-timing-function: ease; /* Suaviza a transição*/
 }
@@ -65,6 +65,7 @@ div#formulario > p {
 
 form > div.campo {
     background-color: #5f2c82;
+    border: 2px solid #5f2c82;
     height: 40px;
     border-radius: 5px;
     margin: 5px 0px;
@@ -72,6 +73,28 @@ form > div.campo {
 
 div.campo > label {
     display: none;
+}
+
+div.campo > i {
+    color: white;
+    font-size: 2em;
+    padding: 5px;
+    width: 40px;
+}
+
+div.campo > input {
+    background-color: #94cfcd;
+    font-size: 1em;
+    width: calc(100% - 45px); /*Um calculo em CSS para enquadrar o input*/
+    height: 100%;
+    border: 0px;
+    border-radius: 5px;
+    padding: 4px;
+    transform: translateY(-13px); /*O item muda de posição para cima (Y)*/
+}
+
+div.campo > input:focus-within { /* O input que estiver digitando, ganha foco*/
+    background-color: white;
 }
 
 form > input[type=submit] {
